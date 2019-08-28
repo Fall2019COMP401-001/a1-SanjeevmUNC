@@ -26,7 +26,7 @@ public class A1Novice
 			String dem_info = GetDemographicInfo(count);
 			int item_info = GetItemInfo(count);
 			double total_price = GetItemPrice(item_info);
-			System.out.println(dem_info + total_price);
+			System.out.println(dem_info + String.format("%.2f", total_price));
 		}
 	}
 	
