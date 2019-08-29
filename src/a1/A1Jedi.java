@@ -74,8 +74,7 @@ public class A1Jedi
 			// collect name of item
 			String item_name = scan.next();
 			
-			// finds the index of the item name that has the same index as the item
-			
+			// finds the index of the item name that has the same index as the item		
 			int index = 0;
 			
 			for (int z = 0; z < name_of_all_items.length; z++)
