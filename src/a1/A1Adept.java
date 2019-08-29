@@ -59,7 +59,6 @@ public class A1Adept
 	public static String[] GetCatalogNames(int total_store_items)
 	{
 		// Creates an array of all the names in the store
-
 		// Obtains the item name and places it in the respective location
 		for (int i = 0; i < total_store_items; i++) 
 		{

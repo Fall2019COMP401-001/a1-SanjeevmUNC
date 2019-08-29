@@ -14,12 +14,6 @@ public class A1Novice
 		// Collects number of users
 		int count = scan.nextInt();
 		
-		//Set values of GetInfo to customer_info array
-		//String[] dem_info = GetDemographicInfo(count);
-		//int[] item_info = GetItemInfo(count);
-		//double[] total_prices = GetItems(item_info);
-		//PrintValues(count, total_prices, dem_info);
-		
 		//make huge for loop and put everything there, iteration each person
 		for (int i = count; i > 0; i--) 
 		{
@@ -36,12 +30,7 @@ public class A1Novice
 		String last_name; 
 		char first_initial;
 		
-		// Creates array of all customer info based on input
-		// String dem_info[] = new String[count];
-
-		// Places full name and number of items into array
-		//for (int i = 0; i < dem_info.length; i++) 
-		//{
+	
 			// Collect first and last name
 		first_name = scan.next();
 		last_name = scan.next();
