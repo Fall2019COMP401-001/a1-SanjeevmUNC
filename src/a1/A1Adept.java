@@ -54,38 +54,7 @@ public class A1Adept
 		System.out.println("Smallest: " + full_names[smallest_index] + " (" + String.format("%.2f", smallest) + ")");
 		System.out.println("Average: " + String.format("%.2f", average));
 		
-	}
-// THESE TWO GET CATALOG METHODS TURNED OUT TO BE USELESS
-	public static String[] GetCatalogNames(int total_store_items)
-	{
-		// Creates an array of all the names in the store
-		// Obtains the item name and places it in the respective location
-		for (int i = 0; i < total_store_items; i++) 
-		{
-			// Obtain the item name
-			String item_name = scan.next();
-			
-			// Place it in the respective array box
-			name_of_all_items[i] = item_name;
-		}
-		return name_of_all_items;
-	}
-	public static double[] GetCatalogPrices(int total_store_items) 
-	{
-		// Creates an array of all the items in the store
-		double[] price_of_all_items = new double[total_store_items];
-		
-		for (int i = 0; i < total_store_items; i++)
-		{
-			// Obtain the item price
-			double item_price = scan.nextDouble();
-			
-			// Place it in the respective array box
-			price_of_all_items[i] = item_price;
-		}
-		return price_of_all_items;	
-	}
-	
+	}	
 	public static String GetPersonName() {
 		
 		// obtain first name
