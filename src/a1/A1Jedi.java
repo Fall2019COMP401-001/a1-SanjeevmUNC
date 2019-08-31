@@ -1,6 +1,7 @@
 package a1;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class A1Jedi
 {
@@ -57,8 +58,10 @@ public class A1Jedi
 		
 		int quantity_of_item;
 		int index;
+		
 		int[] num_of_people_bought_x_item = new int[total_store_items];
 		
+				
 		for (int i = 0; i < total_customers; i++)
 		{
 			// Placed names into array 
@@ -67,7 +70,8 @@ public class A1Jedi
 			// Get number of items they bought
 			int num_of_items_customer_bought = scan.nextInt();
 			
-			
+			ArrayList<String> name_item_bought_pp = new ArrayList<String>(num_of_items_customer_bought);
+
 			for (int c = 0; c < num_of_items_customer_bought; c++)
 			{
 				// Quantity of items here
@@ -75,16 +79,33 @@ public class A1Jedi
 				
 				String item_name = scan.next();
 				
-				for (int z = 0; z < name_of_all_items.length; z++)
+				if (name_item_bought_pp.contains(item_name))
 				{
-					if (item_name.equals(name_of_all_items[z]))
+					name_item_bought_pp.add(item_name);
+					
+					for (int z = 0; z < name_of_all_items.length; z++)
 					{
-						index = z;
-						num_of_items[z] = num_of_items[z] + quantity_of_item;
-						num_of_people_bought_x_item[z] = num_of_people_bought_x_item[z] + 1;
+						if (item_name.equals(name_of_all_items[z]))
+						{
+							index = z;
+							num_of_items[z] = num_of_items[z] + quantity_of_item;
+						}
 					}
-				
-				}		
+				}
+				else 
+				{
+					name_item_bought_pp.add(item_name);
+					
+					for (int z = 0; z < name_of_all_items.length; z++)
+					{
+						if (item_name.equals(name_of_all_items[z]))
+						{
+							index = z;
+							num_of_items[z] = num_of_items[z] + quantity_of_item;
+							num_of_people_bought_x_item[z] = num_of_people_bought_x_item[z] + 1;
+						}
+					}
+				}
 			}
 		
 		}
